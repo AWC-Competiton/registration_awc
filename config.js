@@ -3,5 +3,4 @@ const SUPABASE_URL = "https://nahoygudhnbwhilcioma.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable__95y3un-2F_YjD_yGyG1qw_tenZJtmY";
 
 // URL រូប KHQR ដែលដាក់ក្នុង GitHub ឬ Supabase Storage
-const KHQR_IMAGE_URL = "candidate/photo_2026-08-12_12-12-31.jpg";
 const REGISTRATION_FEE_TEXT = "ថ្លៃចុះឈ្មោះ: $1.0 សម្រាប់ជុំទីមួយ";
