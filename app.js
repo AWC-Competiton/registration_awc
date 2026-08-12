@@ -7,7 +7,7 @@ provinceEl.innerHTML = '<option value="">-- ជ្រើសរើសរាជធ
   provinces.map(p => `<option value="${p}">${p}</option>`).join("");
 
 document.getElementById("paymentText").textContent = REGISTRATION_FEE_TEXT;
-const khqr = document.getElementById("khqrImage");
+const khqr = document.getElementById("candidate/photo_2026-08-12_12-12-31.jpg");
 if (KHQR_IMAGE_URL && !KHQR_IMAGE_URL.startsWith("YOUR_")) khqr.src = KHQR_IMAGE_URL;
 else { khqr.classList.add("hidden"); document.getElementById("khqrMissing").classList.remove("hidden"); }
 
