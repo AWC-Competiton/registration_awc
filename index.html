@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ចុះឈ្មោះបេក្ខជន</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>ប្រព័ន្ធចុះឈ្មោះបេក្ខជន</h1>
+      <p class="muted">សូមបំពេញព័ត៌មានឱ្យបានត្រឹមត្រូវ និងបង់ថ្លៃចុះឈ្មោះតាម KHQR</p>
+
+      <div id="alert" class="alert hidden"></div>
+
+      <form id="registrationForm">
+        <label>ឈ្មោះពេញ *</label>
+        <input id="full_name" required maxlength="150" placeholder="ឧ. សុខ សុភា">
+
+        <label>ភេទ *</label>
+        <select id="gender" required>
+          <option value="">-- ជ្រើសរើស --</option>
+          <option value="ប្រុស">ប្រុស</option>
+          <option value="ស្រី">ស្រី</option>
+          <option value="ផ្សេងទៀត">ផ្សេងទៀត</option>
+        </select>
+
+        <label>កម្រិតថ្នាក់ *</label>
+        <select id="grade" required>
+          <option value="">-- ជ្រើសរើសថ្នាក់ --</option>
+          <option value="៧">៧</option><option value="៨">៨</option>
+          <option value="៩">៩</option><option value="១០">១០</option>
+          <option value="១១">១១</option><option value="១២">១២</option>
+        </select>
+
+        <label>ឈ្មោះសាលា *</label>
+        <input id="school_name" required maxlength="200" placeholder="ឈ្មោះសាលា">
+
+        <label>រាជធានី/ខេត្ត *</label>
+        <select id="province" required></select>
+
+        <div class="payment">
+          <h2>បង់ថ្លៃចុះឈ្មោះ</h2>
+          <p id="paymentText">សូមស្កេន KHQR ខាងក្រោម រួច Upload វិក្កយបត្រ។</p>
+          <img id="khqrImage" class="khqr" alt="Admin KHQR">
+          <p id="khqrMissing" class="warning hidden">Admin មិនទាន់កំណត់ KHQR ទេ។</p>
+        </div>
+
+        <label>Upload វិក្កយបត្រ *</label>
+        <input id="receipt" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" required>
+        <small>អនុញ្ញាត JPG, PNG, WEBP ឬ PDF (អតិបរមា 5MB)</small>
+
+        <button id="submitBtn" type="submit">ដាក់ពាក្យចុះឈ្មោះ</button>
+      </form>
+
+      <div id="success" class="success hidden"></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
