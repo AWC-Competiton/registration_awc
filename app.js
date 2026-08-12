@@ -212,21 +212,47 @@ form.addEventListener("submit", async (e) => {
         registration_number:
           registrationNumber,
 
+        // ==========================
+        // KHMER NAME
+        // ==========================
+
         full_name:
           document
             .getElementById("full_name")
             .value
             .trim(),
 
+        // ==========================
+        // LATIN NAME - NEW
+        // ==========================
+
+        latin_name:
+          document
+            .getElementById("latin_name")
+            .value
+            .trim(),
+
+        // ==========================
+        // GENDER
+        // ==========================
+
         gender:
           document
             .getElementById("gender")
             .value,
 
+        // ==========================
+        // GRADE
+        // ==========================
+
         grade:
           document
             .getElementById("grade")
             .value,
+
+        // ==========================
+        // SCHOOL
+        // ==========================
 
         school_name:
           document
@@ -234,16 +260,32 @@ form.addEventListener("submit", async (e) => {
             .value
             .trim(),
 
+        // ==========================
+        // PROVINCE
+        // ==========================
+
         province:
           document
             .getElementById("province")
             .value,
 
+        // ==========================
+        // RECEIPT
+        // ==========================
+
         receipt_path:
           path,
 
+        // ==========================
+        // PAYMENT STATUS
+        // ==========================
+
         payment_status:
           "pending",
+
+        // ==========================
+        // REGISTRATION STATUS
+        // ==========================
 
         registration_status:
           "pending"
