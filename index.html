@@ -34,23 +34,28 @@
         <input id="full_name" required maxlength="150" placeholder="ឧ. សុខ សុភា">
 
         <div class="form-group">
-        <label for="student_name_en">ឈ្មោះជាឡាតាំង</label>
+          <label for="latin_name">ឈ្មោះជាឡាតាំង</label>
           <input
             type="text"
             id="latin_name"
             name="latin_name"
-            placeholder="Ex: Sok Sopha"
+            placeholder="ឧ. Meng Seang"
+            autocomplete="name"
             required
           >
         </div>
 
-        <label for="gender">ភេទ *</label>
-        <select id="gender" required>
-          <option value="">-- ជ្រើសរើស --</option>
-          <option value="ប្រុស">ប្រុស</option>
-          <option value="ស្រី">ស្រី</option>
-          <option value="ផ្សេងទៀត">ផ្សេងទៀត</option>
-        </select>
+         <label for="gender">ភេទ</label>
+          <select
+            id="gender"
+            name="gender"
+            required
+          >
+    <option value="">-- ជ្រើសរើសភេទ --</option>
+    <option value="ប្រុស">ប្រុស</option>
+    <option value="ស្រី">ស្រី</option>
+  </select>
+</div>
 
         <label for="grade">កម្រិតថ្នាក់ *</label>
         <select id="grade" required>
