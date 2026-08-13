@@ -200,6 +200,12 @@ form.addEventListener("submit", async (e) => {
     }
 
     // ==========================
+    // GET FORM VALUES
+    // ==========================
+
+    const selectedGrade = document.getElementById("grade").value;
+
+    // ==========================
     // SAVE REGISTRATION
     // ==========================
 
@@ -212,19 +218,11 @@ form.addEventListener("submit", async (e) => {
         registration_number:
           registrationNumber,
 
-        // ==========================
-        // KHMER NAME
-        // ==========================
-
         full_name:
           document
             .getElementById("full_name")
             .value
             .trim(),
-
-        // ==========================
-        // LATIN NAME - NEW
-        // ==========================
 
         latin_name:
           document
@@ -232,27 +230,13 @@ form.addEventListener("submit", async (e) => {
             .value
             .trim(),
 
-        // ==========================
-        // GENDER
-        // ==========================
-
         gender:
           document
             .getElementById("gender")
             .value,
 
-        // ==========================
-        // GRADE
-        // ==========================
-
         grade:
-          document
-            .getElementById("grade")
-            .value,
-
-        // ==========================
-        // SCHOOL
-        // ==========================
+          selectedGrade,
 
         school_name:
           document
@@ -260,32 +244,16 @@ form.addEventListener("submit", async (e) => {
             .value
             .trim(),
 
-        // ==========================
-        // PROVINCE
-        // ==========================
-
         province:
           document
             .getElementById("province")
             .value,
 
-        // ==========================
-        // RECEIPT
-        // ==========================
-
         receipt_path:
           path,
 
-        // ==========================
-        // PAYMENT STATUS
-        // ==========================
-
         payment_status:
           "pending",
-
-        // ==========================
-        // REGISTRATION STATUS
-        // ==========================
 
         registration_status:
           "pending"
@@ -301,23 +269,31 @@ form.addEventListener("submit", async (e) => {
 
     form.classList.add("hidden");
 
+    // ទាញយក Link Telegram តាមថ្នាក់ ( fallback ទៅ '#' ប្រសិនបើគ្មាន link )
+    const telegramLink = (typeof TELEGRAM_LINKS !== "undefined" && TELEGRAM_LINKS[selectedGrade]) 
+      ? TELEGRAM_LINKS[selectedGrade] 
+      : "#";
+
     success.innerHTML = `
-      ការចុះឈ្មោះបានជោគជ័យ!
-      <br><br>
+      <h2>✅ ការចុះឈ្មោះបានជោគជ័យ!</h2>
 
-      លេខចុះឈ្មោះរបស់អ្នក:
-      <br>
+      <p>លេខចុះឈ្មោះរបស់អ្នក:</p>
 
-      <strong>
-        ${registrationNumber}
-      </strong>
+      <strong>${registrationNumber}</strong>
 
-      <br><br>
+      <p>
+        សូមរក្សាលេខចុះឈ្មោះនេះទុក។
+        Admin នឹងពិនិត្យការបង់ប្រាក់របស់អ្នក។
+      </p>
 
-      សូមរក្សាលេខនេះទុក។
-      <br>
-
-      Admin នឹងពិនិត្យការបង់ប្រាក់។
+      <a
+        href="${telegramLink}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-btn"
+      >
+        ចូល Telegram ថ្នាក់ ${selectedGrade}
+      </a>
     `;
 
     success.classList.remove("hidden");
@@ -339,28 +315,3 @@ form.addEventListener("submit", async (e) => {
       "ដាក់ពាក្យចុះឈ្មោះ";
   }
 });
-
-const selectedGrade = document.getElementById("grade").value;
-const telegramLink = TELEGRAM_LINKS[selectedGrade];
-
-success.innerHTML = `
-    <h2>✅ ការចុះឈ្មោះបានជោគជ័យ!</h2>
-
-    <p>លេខចុះឈ្មោះរបស់អ្នក:</p>
-
-    <strong>${registrationNumber}</strong>
-
-    <p>
-        សូមរក្សាលេខចុះឈ្មោះនេះទុក។
-        Admin នឹងពិនិត្យការបង់ប្រាក់របស់អ្នក។
-    </p>
-
-    <a
-        href="${telegramLink}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="telegram-btn"
-    >
-        📲 ចូល Telegram ថ្នាក់ ${selectedGrade}
-    </a>
-`;
