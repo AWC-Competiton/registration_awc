@@ -339,3 +339,28 @@ form.addEventListener("submit", async (e) => {
       "ដាក់ពាក្យចុះឈ្មោះ";
   }
 });
+
+const selectedGrade = document.getElementById("grade").value;
+const telegramLink = TELEGRAM_LINKS[selectedGrade];
+
+success.innerHTML = `
+    <h2>✅ ការចុះឈ្មោះបានជោគជ័យ!</h2>
+
+    <p>លេខចុះឈ្មោះរបស់អ្នក:</p>
+
+    <strong>${registrationNumber}</strong>
+
+    <p>
+        សូមរក្សាលេខចុះឈ្មោះនេះទុក។
+        Admin នឹងពិនិត្យការបង់ប្រាក់របស់អ្នក។
+    </p>
+
+    <a
+        href="${telegramLink}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-btn"
+    >
+        📲 ចូល Telegram ថ្នាក់ ${selectedGrade}
+    </a>
+`;
