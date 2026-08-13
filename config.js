@@ -6,10 +6,10 @@ const SUPABASE_ANON_KEY = "sb_publishable__95y3un-2F_YjD_yGyG1qw_tenZJtmY";
 const REGISTRATION_FEE_TEXT = "ថ្លៃចុះឈ្មោះ: $1.0 សម្រាប់ជុំទីមួយ";
 
 const TELEGRAM_LINKS = {
-    "៧": "https://t.me/GRADE_7",
-    "៨": "https://t.me/GRADE_8",
-    "៩": "https://t.me/GRADE_9",
-    "១០": "https://t.me/GRADE_10",
-    "១១": "https://t.me/GRADE_11",
-    "១២": "https://t.me/GRADE_12"
+    "៧": "https://t.me/+PkpWrIgzBX0yNTBl",
+    "៨": "https://t.me/+3GDpbG_a2kE4ZGU1",
+    "៩": "https://t.me/+8BvP5sWptFlhYWFl",
+    "១០": "https://t.me/+zp8gkhx3vyU1ZjFl",
+    "១១": "https://t.me/+4dRf5Hjb-zM0NGI1",
+    "១២": "https://t.me/+xVyL6dsR4ooxNTU9"
 };
