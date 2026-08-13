@@ -292,7 +292,7 @@ form.addEventListener("submit", async (e) => {
         rel="noopener noreferrer"
         class="telegram-btn"
       >
-        ចូល Telegram ថ្នាក់ ${selectedGrade}
+        ចូល Telegram ថ្នាក់ទី ${selectedGrade}
       </a>
     `;
 
