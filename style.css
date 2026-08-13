@@ -414,3 +414,23 @@ button:disabled {
     font-size: 16px;
   }
 }
+
+.telegram-btn {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    background: #229ed9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.telegram-btn:hover {
+    background: #168ac0;
+    transform: translateY(-1px);
+}
